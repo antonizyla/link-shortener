@@ -1,9 +1,9 @@
 import {error, redirect} from "@sveltejs/kit";
-
 import {PrismaClient} from "@prisma/client";
+
 const prisma = new PrismaClient();
 
-// @type {import('./$types').PageLoad}
+/** @type {import('./$types').PageServerLoad} */
 export async function load({params}) {
 
     const slug = params.slug;
